@@ -1,47 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>random-quates-kiran</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>random-quates-kiran</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="index.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
 </head>
+
 <body>
-  <div class="wrapper">
-    <div class="quate-box">
-      <div class="quate-text">
-        <i class="fa fa-quote-left" aria-hidden="true"></i>
+    <div id="wrapper">
+        <div id="quote-box">
+            <div class="quote-text" style="opacity: 1">
+                <i class="fa fa-quote-left"> </i><span id="text"></span>
+            </div>
+            <div class="quote-author" style="opacity: 1">
+                - <span id="author"></span>
+            </div>
+            <div class="buttons">
+                <a class="button" id="tweet-quote" title="Tweet this quote!" target="_top"
+                    style="background-color: rgb(223, 215, 226)">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="button" id="linkedin-quote" title="Share this quote on LinkedIn!" target="_blank" href="#"
+                    style="background-color: rgb(0, 119, 181);">
+                    <i class="fa fa-linkedin"></i>
+                </a>
 
-        <span class="text" id="q-text"></span>
+                <a class="button" id="instagram-quote" title="Share this quote on Instagram!" target="_blank" href="#"
+                    style="background-color: rgb(225, 48, 108);">
+                    <i class="fa fa-instagram"></i>
+                </a>
 
-      </div>
-       <div class="quate-author">
-         -
-         <span class="author" id="a-text"></span>
-       </div>
-       <div class="buttons">
-         
-          <a class="button" id="tweet-quote" title="Tweet this quote!" target="_top"  style="background-color: rgb(155, 89, 182);">
-            <i class="fa fa-twitter"></i>
-          </a>
-           
-           <a class="button" id="tumblr-quote" title="Post this quote on tumblr!" target="_blank" href="#" style="background-color: rgb(155, 89, 182);">
-            <i class="fa fa-tumblr"></i>
-          </a>
-       
-         <button class="button" id="new-quote" style="background-color: rgb(155, 89, 182);">New quote</button>
-       </div>
-    
+
+
+                <button class="button" id="new-quote" style="background-color: rgb(224, 216, 226)">
+                    New quote
+                </button>
+            </div>
+        </div>
+        <div class="footer">by <a href="https://github.com/kirankuyate2157">kiran kuyate</a></div>
     </div>
-    
-<!--      <span>
-       by kiran
-     </span> -->
-  </div>
-  
+
 </body>
+
 </html>
