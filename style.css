@@ -10,13 +10,21 @@ body {
   background-color: #333;
   overflow: hidden; /* Prevent the raindrops from overflowing the body */
 }
-
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .rain {
   position: absolute;
-  width: 1px;
-  height: 80px;
-  background-color: #fff;
-  animation: raindrop 2s linear infinite;
+  width: 0.5px;
+  height: 30px;
+  background-color: #5e5555;
+  animation: raindrop 2s linear infinite, fadeIn 4s ease;
+  z-index: 1;
 }
 
 @keyframes raindrop {
@@ -27,6 +35,7 @@ body {
     transform: translateY(100vh);
   }
 }
+
 /* end  */
 div {
   position: relative;
@@ -39,13 +48,14 @@ body {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
 .footer {
-  width: 450px;
+  width: 90%;
   text-align: center;
   display: block;
   margin: 15px auto 30px auto;
@@ -68,7 +78,7 @@ body {
 }
 #quote-box .quote-text {
   text-align: center;
-  width: 450px;
+  width: 100%;
   height: auto;
   clear: both;
   font-weight: 500;
@@ -79,7 +89,7 @@ body {
   margin-right: 0.4em;
 }
 #quote-box .quote-author {
-  width: 450px;
+  width: 80%;
   height: auto;
   clear: both;
   padding-top: 20px;
@@ -87,7 +97,7 @@ body {
   text-align: right;
 }
 #quote-box .buttons {
-  width: 450px;
+  width: 80%px;
   margin: auto;
   display: block;
 }
@@ -121,4 +131,15 @@ body {
 }
 #quote-box .buttons .button#new-quote {
   float: right;
+}
+
+@media screen and (max-width: 568px) {
+  #quote-box {
+    border-radius: 8px;
+    position: relative;
+    width: 250px;
+    padding: 40px 50px;
+    display: table;
+    /* background-color: #fff; */
+  }
 }
